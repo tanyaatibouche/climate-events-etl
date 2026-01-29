@@ -14,7 +14,15 @@ object DataLoader{
         } match{
             case Success(jsonString) => {
                 decode[List[Json]](jsonString) match {
-                    case Right(json) =>Right(json.flatMap(json => json.as[Event].toOption))
+                    case Right(jsonList) =>
+                        val result = jsonList.map(_.as[Event])
+                        val events = result.collect { case Right(e) => e }
+                        errors = result.count(_.isLeft)
+                        Right(LoadResult(
+                            events = events,
+                            totalParsed = jsonList.size
+                            parsingErrors = errors
+                        ))
                     case Left(error) => Left(error.getMessage)
                 }
             }

@@ -10,10 +10,12 @@ object DataValidator {
     }
 
     def removeDuplicates(event: List[Event]): List[Event] = {
-        event.groupBy(_.id).values.map(_.head).toList
+        val uniqueEvents = event.groupBy(_.id).values.map(_.head).toList
+        (uniqueEvents, events.size - unique.size)
     }
 
     def filterValid(events: List[Event]): List[Event] = {
-        removeDuplicates(events.filter(isValid))
+        val validEvents = events.filter(isValid)
+        removeDuplicates(validEvents)
     }
 }
