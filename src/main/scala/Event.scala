@@ -14,14 +14,43 @@ case class Event (
     windSpeed: Option[Int]
 )
 
-case class WorstEvent (
-    name: Option[String],
-    damage: Option[Double]
+case class DeadliestEvent(
+    name: String,
+    eventType: String,
+    casualties: Int,
+    year: Int
 )
 
-case class DeadliestEvent (
-    name: Option[String],
-    casualties: Int
+case class MostExpensiveEvent(
+    name: String,
+    eventType: String,
+    damage: Double,
+    year: Int
 )
 
+case class RegionStats(
+    region: String,
+    events: Int
+)
 
+case class Statistics(
+    total_events_parsed: Int,
+    total_events_valid: Int,
+    parsing_errors: Int,
+    duplicates_removed: Int
+)
+
+case class Report(
+    statistics: Statistics,
+    events_by_type: Map[String, Int],
+    events_by_severity: Map[String, Int],
+    deadliest_events: List[DeadliestEvent],
+    most_expensive_events: List[MostExpensiveEvent],
+    events_by_year: Map[String, Int],
+    events_by_country: Map[String, Int],
+    total_casualties: Int,
+    total_affected: Long,
+    total_damage: Double,
+    average_casualties_by_type: Map[String, Double],
+    most_affected_regions: List[RegionStats]
+)
