@@ -1,9 +1,7 @@
 object BonusAnalytics {
 
-    //Analyse temporelle
     def decade(year: Int): Int = (year / 10) * 10
 
-    // Tendance : nombre d'événements par décennie
     def eventsPerDecade(events: Seq[Event]): Seq[(Int, Int)] =
         events
             .groupBy(e => decade(e.year))
@@ -11,7 +9,6 @@ object BonusAnalytics {
             .map((dec, es) => (dec, es.size))
             .sortBy(_._1)
     
-    // Événements de sévérité 5 par décennie
     def severity5PerDecade(events: Seq[Event]): Seq[(Int, Int)] =
         events
             .filter(_.severity == 5)
@@ -20,12 +17,9 @@ object BonusAnalytics {
             .map((dec, es) => (dec, es.size))
             .sortBy(_._1)
 
-
-    //vénements nommés
     def isMajor(e: Event): Boolean = e.severity >= 4 || e.casualties >= 100 || e.damage.exists(_ >= 1e9)
     def isNamed(e: Event): Boolean = e.name.exists(_.trim.nonEmpty)
 
-    //Liste des événements majeurs ayant un nom
     def namedMajorEvents(events: Seq[Event]): Seq[Event] =
         events
             .filter(e => isNamed(e) && isMajor(e))
@@ -39,7 +33,6 @@ object BonusAnalytics {
         avgDamage: Double
     )
     
-    //Statistiques sur les ouragans nommés uniquement
     def namedHurricaneStats(events: Seq[Event]): NamedHurricaneStats = {
         val hurricanes = events.filter(e => e.eventType == "Hurricane" && isNamed(e))
 
@@ -56,8 +49,6 @@ object BonusAnalytics {
         )
     }
     
-    //Zones à risque
-    //Régions avec le plus d'événements
     def topRegions(events: Seq[Event], n: Int = 10): Seq[(String, Int)] =
         events
             .groupBy(_.region)
@@ -66,7 +57,6 @@ object BonusAnalytics {
             .sortBy((_, count) => -count)
             .take(n)
 
-    //Type d'événement le plus fréquent par région
     def mostFrequentTypeByRegion(events: Seq[Event]): Seq[(String, String, Int)] =
         events
             .groupBy(_.region)
@@ -76,7 +66,7 @@ object BonusAnalytics {
                     es.groupBy(_.eventType)
                         .toSeq
                         .map { case (t, ts) => (t, ts.size) }
-                        .sortBy { case (t, c) => (-c, t) } // tie-break: alphabetical
+                        .sortBy { case (t, c) => (-c, t) }
                         .head
 
                 (region, bestType, bestCount))

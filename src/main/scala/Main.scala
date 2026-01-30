@@ -44,6 +44,13 @@ object Main extends App {
       val jsonOut = s"reports/results_${outBase}.json"
       val txtOut  = s"reports/report_${outBase}.txt"
 
+      val bonusOut = s"reports/bonus_${outBase}.txt"
+
+      ReportGenerator.writeBonusReport(uniqueEvents, bonusOut) match {
+        case Right(_) => println(s"   -> $bonusOut")
+        case Left(e)  => println(s"   bonus report failed: $e")
+      }
+
       (report, perf, jsonOut, txtOut, stats)
     }
 

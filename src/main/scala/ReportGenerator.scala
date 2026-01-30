@@ -172,4 +172,74 @@ RAPPORT D'ANALYSE - ÉVÉNEMENTS CLIMATIQUES
 ===============================================
 """
     }
+
+    def writeBonusReport(events: List[Event], filename: String): Either[String, Unit] = {
+        Try {
+        val path = Paths.get(filename)
+        val parent = path.getParent
+        if (parent != null && !Files.exists(parent)) Files.createDirectories(parent)
+
+        val txt = bonusText(events)
+        Files.write(path, txt.getBytes(StandardCharsets.UTF_8))
+        }.toEither.left.map(_.getMessage).map(_ => ())
+    }
+
+    private def bonusText(events: List[Event]): String = {
+        val eventsPerDecade = BonusAnalytics.eventsPerDecade(events)
+        val sev5PerDecade = BonusAnalytics.severity5PerDecade(events)
+        val namedMajors = BonusAnalytics.namedMajorEvents(events).take(10)
+        val hurricaneStats = BonusAnalytics.namedHurricaneStats(events)
+        val topRegions = BonusAnalytics.topRegions(events, 10)
+        val mostFreqType = BonusAnalytics.mostFrequentTypeByRegion(events).take(10)
+
+        val part1 =
+            "Événements par décennie\n" +
+                eventsPerDecade.map { case (d, c) => s"- $d : $c" }.mkString("\n")
+
+        val part2 =
+            "\n\nSévérité 5 par décennie\n" +
+                sev5PerDecade.map { case (d, c) => s"- $d : $c" }.mkString("\n")
+
+        val part3 =
+            "\n\nÉvénements majeurs nommés (Top 10)\n" +
+                (if (namedMajors.isEmpty) "Aucun"
+                else namedMajors.zipWithIndex.map { case (e, i) =>
+                s"${i + 1}. ${e.name.getOrElse("N/A")} (${e.eventType}, ${e.year}) - sev=${e.severity}, victims=${e.casualties}"
+                }.mkString("\n"))
+
+        val part4 =
+            s"""
+    \n\nOuragans nommés (stats)
+    - Count           : ${hurricaneStats.count}
+    - Total victims   : ${hurricaneStats.totalCasualties}
+    - Total damage    : ${hurricaneStats.totalDamage}
+    - Avg victims     : ${hurricaneStats.avgCasualties}
+    - Avg damage      : ${hurricaneStats.avgDamage}
+    """.trim
+
+        val part5 =
+        "\n\nTop régions (nb d'événements)\n" +
+            (if (topRegions.isEmpty) "Aucune"
+            else topRegions.map { case (r, c) => s"- $r : $c" }.mkString("\n"))
+
+        val part6 =
+        "\n\nType le plus fréquent par région (Top 10)\n" +
+            (if (mostFreqType.isEmpty) "Aucune"
+            else mostFreqType.map { case (region, t, c) => s"- $region : $t ($c)" }.mkString("\n"))
+
+        s"""
+========================================
+        BONUS REPORT (SIMPLE)
+========================================
+
+$part1
+$part2
+$part3
+$part4
+$part5
+$part6
+
+========================================
+""".trim + "\n"
+    }
 }
