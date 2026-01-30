@@ -1,0 +1,57 @@
+BONUS REPORT
+
+Événements par décennie
+- 2000 : 3900
+- 2010 : 3800
+- 2020 : 2300
+
+
+Sévérité 5 par décennie
+- 2000 : 800
+- 2010 : 700
+- 2020 : 1000
+
+
+Événements majeurs nommés (Top 10)
+1. Sichuan Earthquake (44) (Earthquake, 2005) - sev=5, victims=199140
+2. Sichuan Earthquake (3) (Earthquake, 2005) - sev=5, victims=199140
+3. Sichuan Earthquake (29) (Earthquake, 2005) - sev=5, victims=199140
+4. Sichuan Earthquake (84) (Earthquake, 2005) - sev=5, victims=199140
+5. Sichuan Earthquake (2) (Earthquake, 2005) - sev=5, victims=199140
+6. Sichuan Earthquake (47) (Earthquake, 2005) - sev=5, victims=199140
+7. Sichuan Earthquake (46) (Earthquake, 2005) - sev=5, victims=199140
+8. Sichuan Earthquake (87) (Earthquake, 2005) - sev=5, victims=199140
+9. Sichuan Earthquake (71) (Earthquake, 2005) - sev=5, victims=199140
+10. Sichuan Earthquake (89) (Earthquake, 2005) - sev=5, victims=199140
+Ouragans nommés (stats)
+    - Count           : 400
+    - Total victims   : 4731500
+    - Total damage    : 1.761635999999999E7
+    - Avg victims     : 11828.75
+    - Avg damage      : 44040.89999999997
+
+
+Top régions (nb d'événements)
+- Southeast Asia : 2300
+- Southern Europe : 1200
+- South Asia : 1200
+- East Africa : 900
+- East Asia : 700
+- South America : 700
+- Middle East : 700
+- North America : 700
+- Central Asia : 500
+- Oceania : 500
+
+
+Type le plus fréquent par région (Top 10)
+- Southeast Asia : Flood (600)
+- South Asia : Drought (400)
+- East Asia : Earthquake (300)
+- Oceania : Wildfire (300)
+- Southern Europe : Drought (300)
+- North America : Drought (300)
+- Central Asia : Flood (200)
+- Central America : Drought (200)
+- South America : Drought (200)
+- Middle East : Earthquake (200)

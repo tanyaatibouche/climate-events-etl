@@ -37,10 +37,11 @@ case class Statistics(
     total_events_parsed: Int,
     total_events_valid: Int,
     parsing_errors: Int,
+    invalid_objects: Int,
     duplicates_removed: Int
 )
 
-case class Report(
+case class AnalysisReport(
     statistics: Statistics,
     events_by_type: Map[String, Int],
     events_by_severity: Map[String, Int],

@@ -1,0 +1,53 @@
+BONUS REPORT
+
+Événements par décennie
+- 2000 : 39
+- 2010 : 38
+- 2020 : 23
+
+
+Sévérité 5 par décennie
+- 2000 : 8
+- 2010 : 7
+- 2020 : 10
+
+
+Événements majeurs nommés (Top 10)
+1. Sichuan Earthquake (Earthquake, 2005) - sev=5, victims=199140
+2. Tohoku Earthquake (Earthquake, 2019) - sev=5, victims=171904
+3. Hurricane Michael (Hurricane, 2016) - sev=5, victims=47074
+4. Northridge Earthquake (Earthquake, 2023) - sev=5, victims=6939
+5. Northridge Earthquake (Earthquake, 2000) - sev=4, victims=4757
+6. Hurricane Sandy (Hurricane, 2016) - sev=2, victims=143
+Ouragans nommés (stats)
+    - Count           : 4
+    - Total victims   : 47315
+    - Total damage    : 176163.6
+    - Avg victims     : 11828.75
+    - Avg damage      : 44040.9
+
+
+Top régions (nb d'événements)
+- Southeast Asia : 23
+- Southern Europe : 12
+- South Asia : 12
+- East Africa : 9
+- East Asia : 7
+- South America : 7
+- Middle East : 7
+- North America : 7
+- Central Asia : 5
+- Oceania : 5
+
+
+Type le plus fréquent par région (Top 10)
+- Southeast Asia : Flood (6)
+- South Asia : Drought (4)
+- East Asia : Earthquake (3)
+- Oceania : Wildfire (3)
+- Southern Europe : Drought (3)
+- North America : Drought (3)
+- Central Asia : Flood (2)
+- Central America : Drought (2)
+- South America : Drought (2)
+- Middle East : Earthquake (2)

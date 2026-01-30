@@ -1,0 +1,199 @@
+{
+  "statistics" : {
+    "total_events_parsed" : 500,
+    "total_events_valid" : 100,
+    "parsing_errors" : 20,
+    "duplicates_removed" : 321
+  },
+  "events_by_type" : {
+    "Hurricane" : 12,
+    "Flood" : 17,
+    "Wildfire" : 18,
+    "Drought" : 22,
+    "Earthquake" : 16,
+    "Tornado" : 15
+  },
+  "events_by_severity" : {
+    "4" : 12,
+    "5" : 25,
+    "1" : 20,
+    "2" : 20,
+    "3" : 23
+  },
+  "deadliest_events" : [
+    {
+      "name" : "N/A",
+      "type" : "Tornado",
+      "casualties" : 290342,
+      "year" : 2024
+    },
+    {
+      "name" : "N/A",
+      "type" : "Wildfire",
+      "casualties" : 267179,
+      "year" : 2000
+    },
+    {
+      "name" : "N/A",
+      "type" : "Wildfire",
+      "casualties" : 265609,
+      "year" : 2021
+    },
+    {
+      "name" : "N/A",
+      "type" : "Wildfire",
+      "casualties" : 214204,
+      "year" : 2012
+    },
+    {
+      "name" : "Sichuan Earthquake",
+      "type" : "Earthquake",
+      "casualties" : 199140,
+      "year" : 2005
+    },
+    {
+      "name" : "N/A",
+      "type" : "Flood",
+      "casualties" : 192284,
+      "year" : 2024
+    },
+    {
+      "name" : "Tohoku Earthquake",
+      "type" : "Earthquake",
+      "casualties" : 171904,
+      "year" : 2019
+    },
+    {
+      "name" : "N/A",
+      "type" : "Wildfire",
+      "casualties" : 148421,
+      "year" : 2006
+    },
+    {
+      "name" : "N/A",
+      "type" : "Drought",
+      "casualties" : 123813,
+      "year" : 2007
+    },
+    {
+      "name" : "N/A",
+      "type" : "Wildfire",
+      "casualties" : 121595,
+      "year" : 2007
+    }
+  ],
+  "most_expensive_events" : [
+    {
+      "name" : "Tornado",
+      "type" : "Tornado",
+      "damage" : 222765.2,
+      "year" : 2017
+    },
+    {
+      "name" : "Northridge Earthquake",
+      "type" : "Earthquake",
+      "damage" : 216802.4,
+      "year" : 2023
+    },
+    {
+      "name" : "Flood",
+      "type" : "Flood",
+      "damage" : 210926.2,
+      "year" : 2024
+    },
+    {
+      "name" : "Wildfire",
+      "type" : "Wildfire",
+      "damage" : 194853.7,
+      "year" : 2009
+    },
+    {
+      "name" : "Wildfire",
+      "type" : "Wildfire",
+      "damage" : 183336.8,
+      "year" : 2006
+    },
+    {
+      "name" : "Hurricane",
+      "type" : "Hurricane",
+      "damage" : 180097.0,
+      "year" : 2012
+    },
+    {
+      "name" : "Hurricane Michael",
+      "type" : "Hurricane",
+      "damage" : 176110.9,
+      "year" : 2016
+    },
+    {
+      "name" : "Tornado",
+      "type" : "Tornado",
+      "damage" : 175643.7,
+      "year" : 2018
+    },
+    {
+      "name" : "Flood",
+      "type" : "Flood",
+      "damage" : 162142.0,
+      "year" : 2010
+    },
+    {
+      "name" : "Tornado",
+      "type" : "Tornado",
+      "damage" : 128611.6,
+      "year" : 2023
+    }
+  ],
+  "events_by_year" : {
+    "2020" : 4,
+    "2024" : 6,
+    "2022" : 3,
+    "2023" : 5,
+    "2021" : 5
+  },
+  "events_by_country" : {
+    "Philippines" : 5,
+    "Afghanistan" : 5,
+    "Thailand" : 5,
+    "China" : 4,
+    "India" : 5,
+    "Australia" : 5,
+    "Italy" : 5,
+    "Indonesia" : 7,
+    "United States" : 7,
+    "Greece" : 7
+  },
+  "total_casualties" : 3148715,
+  "total_affected" : 115076965,
+  "total_damage" : 2485566.6,
+  "average_casualties_by_type" : {
+    "Hurricane" : 14373.916666666666,
+    "Flood" : 22699.058823529413,
+    "Wildfire" : 68660.88888888889,
+    "Drought" : 9879.045454545454,
+    "Earthquake" : 24067.0625,
+    "Tornado" : 50135.73333333333
+  },
+  "most_affected_regions" : [
+    {
+      "region" : "Southeast Asia",
+      "events" : 23
+    },
+    {
+      "region" : "South America",
+      "events" : 7
+    },
+    {
+      "region" : "North America",
+      "events" : 7
+    },
+    {
+      "region" : "Southern Europe",
+      "events" : 12
+    },
+    {
+      "region" : "Middle East",
+      "events" : 7
+    }
+  ]
+}
