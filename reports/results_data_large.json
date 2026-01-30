@@ -1,0 +1,199 @@
+{
+  "statistics" : {
+    "total_events_parsed" : 10000,
+    "total_events_valid" : 10000,
+    "parsing_errors" : 0,
+    "duplicates_removed" : 0
+  },
+  "events_by_type" : {
+    "Hurricane" : 1200,
+    "Flood" : 1700,
+    "Wildfire" : 1800,
+    "Drought" : 2200,
+    "Earthquake" : 1600,
+    "Tornado" : 1500
+  },
+  "events_by_severity" : {
+    "4" : 1200,
+    "5" : 2500,
+    "1" : 2000,
+    "2" : 2000,
+    "3" : 2300
+  },
+  "deadliest_events" : [
+    {
+      "name" : "N/A",
+      "type" : "Tornado",
+      "casualties" : 290342,
+      "year" : 2024
+    },
+    {
+      "name" : "N/A",
+      "type" : "Tornado",
+      "casualties" : 290342,
+      "year" : 2024
+    },
+    {
+      "name" : "N/A",
+      "type" : "Tornado",
+      "casualties" : 290342,
+      "year" : 2024
+    },
+    {
+      "name" : "N/A",
+      "type" : "Tornado",
+      "casualties" : 290342,
+      "year" : 2024
+    },
+    {
+      "name" : "N/A",
+      "type" : "Tornado",
+      "casualties" : 290342,
+      "year" : 2024
+    },
+    {
+      "name" : "N/A",
+      "type" : "Tornado",
+      "casualties" : 290342,
+      "year" : 2024
+    },
+    {
+      "name" : "N/A",
+      "type" : "Tornado",
+      "casualties" : 290342,
+      "year" : 2024
+    },
+    {
+      "name" : "N/A",
+      "type" : "Tornado",
+      "casualties" : 290342,
+      "year" : 2024
+    },
+    {
+      "name" : "N/A",
+      "type" : "Tornado",
+      "casualties" : 290342,
+      "year" : 2024
+    },
+    {
+      "name" : "N/A",
+      "type" : "Tornado",
+      "casualties" : 290342,
+      "year" : 2024
+    }
+  ],
+  "most_expensive_events" : [
+    {
+      "name" : "Tornado",
+      "type" : "Tornado",
+      "damage" : 222765.2,
+      "year" : 2017
+    },
+    {
+      "name" : "Tornado",
+      "type" : "Tornado",
+      "damage" : 222765.2,
+      "year" : 2017
+    },
+    {
+      "name" : "Tornado",
+      "type" : "Tornado",
+      "damage" : 222765.2,
+      "year" : 2017
+    },
+    {
+      "name" : "Tornado",
+      "type" : "Tornado",
+      "damage" : 222765.2,
+      "year" : 2017
+    },
+    {
+      "name" : "Tornado",
+      "type" : "Tornado",
+      "damage" : 222765.2,
+      "year" : 2017
+    },
+    {
+      "name" : "Tornado",
+      "type" : "Tornado",
+      "damage" : 222765.2,
+      "year" : 2017
+    },
+    {
+      "name" : "Tornado",
+      "type" : "Tornado",
+      "damage" : 222765.2,
+      "year" : 2017
+    },
+    {
+      "name" : "Tornado",
+      "type" : "Tornado",
+      "damage" : 222765.2,
+      "year" : 2017
+    },
+    {
+      "name" : "Tornado",
+      "type" : "Tornado",
+      "damage" : 222765.2,
+      "year" : 2017
+    },
+    {
+      "name" : "Tornado",
+      "type" : "Tornado",
+      "damage" : 222765.2,
+      "year" : 2017
+    }
+  ],
+  "events_by_year" : {
+    "2020" : 400,
+    "2024" : 600,
+    "2022" : 300,
+    "2023" : 500,
+    "2021" : 500
+  },
+  "events_by_country" : {
+    "Philippines" : 500,
+    "Afghanistan" : 500,
+    "Thailand" : 500,
+    "China" : 400,
+    "India" : 500,
+    "Australia" : 500,
+    "Italy" : 500,
+    "Indonesia" : 700,
+    "United States" : 700,
+    "Greece" : 700
+  },
+  "total_casualties" : 314871500,
+  "total_affected" : 13447630100,
+  "total_damage" : 2.5074622999999744E8,
+  "average_casualties_by_type" : {
+    "Hurricane" : 14373.916666666666,
+    "Flood" : 22699.058823529413,
+    "Wildfire" : 68660.88888888889,
+    "Drought" : 9879.045454545454,
+    "Earthquake" : 24067.0625,
+    "Tornado" : 50135.73333333333
+  },
+  "most_affected_regions" : [
+    {
+      "region" : "Southeast Asia",
+      "events" : 2300
+    },
+    {
+      "region" : "South Asia",
+      "events" : 1200
+    },
+    {
+      "region" : "South America",
+      "events" : 700
+    },
+    {
+      "region" : "North America",
+      "events" : 700
+    },
+    {
+      "region" : "Southern Europe",
+      "events" : 1200
+    }
+  ]
+}

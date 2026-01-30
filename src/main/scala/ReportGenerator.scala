@@ -73,7 +73,6 @@ object ReportGenerator {
         .take(n)
         .map { case (r, es) => OutputRegionStats(r, es.size) }
 
-    // ======= 1. GENERATION DU RAPPORT =======
     def generateReport(events: List[Event], stats: Statistics): OutputAnalysisReport = {
 
         val byType = normalize(allTypes, StatCalculator.countByType(events))
@@ -110,7 +109,6 @@ object ReportGenerator {
         )
     }
 
-    // ======= 2. ECRITURE DES FICHIERS =======
     def writeReport( report: OutputAnalysisReport, jsonFile: String, txtFile: String, perf: Performance ): Either[String, Unit] = {
         for {
             _ <- writeJson(report, jsonFile)
@@ -147,29 +145,26 @@ object ReportGenerator {
     // ======= FORMAT TXT =======
     private def buildText(r: OutputAnalysisReport, p: Performance): String = {
         s"""    
-===============================================
 RAPPORT D'ANALYSE - ÉVÉNEMENTS CLIMATIQUES
-===============================================
 
-📊 STATISTIQUES DE PARSING
+STATISTIQUES DE PARSING
 ---------------------------
 - Entrées totales lues      : ${r.statistics.total_events_parsed}
 - Entrées valides           : ${r.statistics.total_events_valid}
 - Erreurs de parsing        : ${r.statistics.parsing_errors}
 - Doublons supprimés        : ${r.statistics.duplicates_removed}
 
-📊 IMPACT GLOBAL
+IMPACT GLOBAL
 -----------------
 - Total victimes            : ${r.total_casualties}
 - Total personnes affectées : ${r.total_affected}
 - Coût total des dégâts     : ${r.total_damage / 1e6} M
 
-⏱️ PERFORMANCE
+PERFORMANCE
 ---------------
 - Temps de traitement       : ${p.processing_seconds}
 - Entrées/seconde           : ${p.entries_per_second}
 
-===============================================
 """
     }
 
@@ -228,9 +223,7 @@ RAPPORT D'ANALYSE - ÉVÉNEMENTS CLIMATIQUES
             else mostFreqType.map { case (region, t, c) => s"- $region : $t ($c)" }.mkString("\n"))
 
         s"""
-========================================
-        BONUS REPORT (SIMPLE)
-========================================
+        BONUS REPORT
 
 $part1
 $part2
@@ -239,7 +232,6 @@ $part4
 $part5
 $part6
 
-========================================
 """.trim + "\n"
     }
 }

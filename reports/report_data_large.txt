@@ -1,0 +1,21 @@
+    
+RAPPORT D'ANALYSE - ÉVÉNEMENTS CLIMATIQUES
+
+STATISTIQUES DE PARSING
+---------------------------
+- Entrées totales lues      : 10000
+- Entrées valides           : 10000
+- Erreurs de parsing        : 0
+- Doublons supprimés        : 0
+
+IMPACT GLOBAL
+-----------------
+- Total victimes            : 314871500
+- Total personnes affectées : 13447630100
+- Coût total des dégâts     : 250.74622999999744 M
+
+PERFORMANCE
+---------------
+- Temps de traitement       : 0.9866767
+- Entrées/seconde           : 10135.032072815746
+
